@@ -1,0 +1,182 @@
+   N  P  K temperature humidity       ph rainfall label
+1 90 42 43    20.87974 82.00274 6.502985 202.9355  rice
+2 85 58 41    21.77046 80.31964 7.038096 226.6555  rice
+3 60 55 44    23.00446 82.32076 7.840207 263.9642  rice
+4 74 35 40    26.49110 80.15836 6.980401 242.8640  rice
+5 78 42 42    20.13017 81.60487 7.628473 262.7173  rice
+6 69 37 42    23.05805 83.37012 7.073454 251.0550  rice
+[1] 2200    8
+'data.frame':	2200 obs. of  8 variables:
+ $ N          : int  90 85 60 74 78 69 69 94 89 68 ...
+ $ P          : int  42 58 55 35 42 37 55 53 54 58 ...
+ $ K          : int  43 41 44 40 42 42 38 40 38 38 ...
+ $ temperature: num  20.9 21.8 23 26.5 20.1 ...
+ $ humidity   : num  82 80.3 82.3 80.2 81.6 ...
+ $ ph         : num  6.5 7.04 7.84 6.98 7.63 ...
+ $ rainfall   : num  203 227 264 243 263 ...
+ $ label      : Factor w/ 22 levels "apple","banana",..: 21 21 21 21 21 21 21 21 21 21 ...
+       N                P                K           temperature    
+ Min.   :  0.00   Min.   :  5.00   Min.   :  5.00   Min.   : 8.826  
+ 1st Qu.: 21.00   1st Qu.: 28.00   1st Qu.: 20.00   1st Qu.:22.769  
+ Median : 37.00   Median : 51.00   Median : 32.00   Median :25.599  
+ Mean   : 50.55   Mean   : 53.36   Mean   : 48.15   Mean   :25.616  
+ 3rd Qu.: 84.25   3rd Qu.: 68.00   3rd Qu.: 49.00   3rd Qu.:28.562  
+ Max.   :140.00   Max.   :145.00   Max.   :205.00   Max.   :43.675  
+                                                                    
+    humidity           ph           rainfall            label     
+ Min.   :14.26   Min.   :3.505   Min.   : 20.21   apple    : 100  
+ 1st Qu.:60.26   1st Qu.:5.972   1st Qu.: 64.55   banana   : 100  
+ Median :80.47   Median :6.425   Median : 94.87   blackgram: 100  
+ Mean   :71.48   Mean   :6.469   Mean   :103.46   chickpea : 100  
+ 3rd Qu.:89.95   3rd Qu.:6.924   3rd Qu.:124.27   coconut  : 100  
+ Max.   :99.98   Max.   :9.935   Max.   :298.56   coffee   : 100  
+                                                  (Other)  :1600  
+Missing values: 0 
+Duplicate rows: 0 
+
+      apple      banana   blackgram    chickpea     coconut      coffee 
+        100         100         100         100         100         100 
+     cotton      grapes        jute kidneybeans      lentil       maize 
+        100         100         100         100         100         100 
+      mango   mothbeans    mungbean   muskmelon      orange      papaya 
+        100         100         100         100         100         100 
+ pigeonpeas pomegranate        rice  watermelon 
+        100         100         100         100 
+
+  Acidic Alkaline  Neutral 
+     573      185     1442 
+apple 112.7 
+banana 104.6 
+blackgram 67.9 
+chickpea 80.1 
+coconut 175.7 
+coffee 158.1 
+cotton 80.4 
+grapes 69.6 
+jute 174.8 
+kidneybeans 105.9 
+lentil 45.7 
+maize 84.8 
+mango 94.7 
+mothbeans 51.2 
+mungbean 48.4 
+muskmelon 24.7 
+orange 110.5 
+papaya 142.6 
+pigeonpeas 149.5 
+pomegranate 107.5 
+rice 236.2 
+watermelon 50.8 
+null device 
+          1 
+null device 
+          1 
+                N     P     K temperature humidity    ph rainfall
+N            1.00 -0.23 -0.14        0.03     0.19  0.10     0.06
+P           -0.23  1.00  0.74       -0.13    -0.12 -0.14    -0.06
+K           -0.14  0.74  1.00       -0.16     0.19 -0.17    -0.05
+temperature  0.03 -0.13 -0.16        1.00     0.21 -0.02    -0.03
+humidity     0.19 -0.12  0.19        0.21     1.00 -0.01     0.09
+ph           0.10 -0.14 -0.17       -0.02    -0.01  1.00    -0.11
+rainfall     0.06 -0.06 -0.05       -0.03     0.09 -0.11     1.00
+null device 
+          1 
+null device 
+          1 
+Train: 1760  Test: 440 
+          Model Accuracy
+1 Decision Tree    95.45
+2   Naive Bayes    99.55
+3     KNN (k=5)    97.50
+4 Random Forest    99.77
+null device 
+          1 
+null device 
+          1 
+            MeanDecreaseAccuracy
+N                           58.3
+P                           63.1
+K                           64.7
+temperature                 37.2
+humidity                    77.1
+ph                          37.2
+rainfall                    85.5
+             Predicted
+Actual        apple banana blackgram chickpea coconut coffee cotton grapes jute
+  apple          20      0         0        0       0      0      0      0    0
+  banana          0     20         0        0       0      0      0      0    0
+  blackgram       0      0        20        0       0      0      0      0    0
+  chickpea        0      0         0       20       0      0      0      0    0
+  coconut         0      0         0        0      20      0      0      0    0
+  coffee          0      0         0        0       0     20      0      0    0
+  cotton          0      0         0        0       0      0     20      0    0
+  grapes          0      0         0        0       0      0      0     20    0
+  jute            0      0         0        0       0      0      0      0   20
+  kidneybeans     0      0         0        0       0      0      0      0    0
+  lentil          0      0         0        0       0      0      0      0    0
+  maize           0      0         0        0       0      0      0      0    0
+  mango           0      0         0        0       0      0      0      0    0
+  mothbeans       0      0         0        0       0      0      0      0    0
+  mungbean        0      0         0        0       0      0      0      0    0
+  muskmelon       0      0         0        0       0      0      0      0    0
+  orange          0      0         0        0       0      0      0      0    0
+  papaya          0      0         0        0       0      0      0      0    0
+  pigeonpeas      0      0         0        0       0      0      0      0    0
+  pomegranate     0      0         0        0       0      0      0      0    0
+  rice            0      0         0        0       0      0      0      0    0
+  watermelon      0      0         0        0       0      0      0      0    0
+             Predicted
+Actual        kidneybeans lentil maize mango mothbeans mungbean muskmelon
+  apple                 0      0     0     0         0        0         0
+  banana                0      0     0     0         0        0         0
+  blackgram             0      0     0     0         0        0         0
+  chickpea              0      0     0     0         0        0         0
+  coconut               0      0     0     0         0        0         0
+  coffee                0      0     0     0         0        0         0
+  cotton                0      0     0     0         0        0         0
+  grapes                0      0     0     0         0        0         0
+  jute                  0      0     0     0         0        0         0
+  kidneybeans          20      0     0     0         0        0         0
+  lentil                0     20     0     0         0        0         0
+  maize                 0      0    20     0         0        0         0
+  mango                 0      0     0    20         0        0         0
+  mothbeans             0      1     0     0        19        0         0
+  mungbean              0      0     0     0         0       20         0
+  muskmelon             0      0     0     0         0        0        20
+  orange                0      0     0     0         0        0         0
+  papaya                0      0     0     0         0        0         0
+  pigeonpeas            0      0     0     0         0        0         0
+  pomegranate           0      0     0     0         0        0         0
+  rice                  0      0     0     0         0        0         0
+  watermelon            0      0     0     0         0        0         0
+             Predicted
+Actual        orange papaya pigeonpeas pomegranate rice watermelon
+  apple            0      0          0           0    0          0
+  banana           0      0          0           0    0          0
+  blackgram        0      0          0           0    0          0
+  chickpea         0      0          0           0    0          0
+  coconut          0      0          0           0    0          0
+  coffee           0      0          0           0    0          0
+  cotton           0      0          0           0    0          0
+  grapes           0      0          0           0    0          0
+  jute             0      0          0           0    0          0
+  kidneybeans      0      0          0           0    0          0
+  lentil           0      0          0           0    0          0
+  maize            0      0          0           0    0          0
+  mango            0      0          0           0    0          0
+  mothbeans        0      0          0           0    0          0
+  mungbean         0      0          0           0    0          0
+  muskmelon        0      0          0           0    0          0
+  orange          20      0          0           0    0          0
+  papaya           0     20          0           0    0          0
+  pigeonpeas       0      0         20           0    0          0
+  pomegranate      0      0          0          20    0          0
+  rice             0      0          0           0   20          0
+  watermelon       0      0          0           0    0         20
+RF OOB error: 0.57 %
+null device 
+          1 
+Misclassified: 1 of 440 
+Sample 1 (N=90,P=42,K=43,T=21,H=82,pH=6.5,R=203): rice 
+Sample 2 (N=20,P=130,K=200,T=23,H=82,pH=6,R=70): grapes 
+Sample 3 (N=100,P=18,K=50,T=25,H=55,pH=6.8,R=80): coffee 

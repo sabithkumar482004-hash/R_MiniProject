@@ -1,0 +1,5 @@
+"Model","Accuracy"
+"Decision Tree",95.45
+"Naive Bayes",99.55
+"KNN (k=5)",97.5
+"Random Forest",99.77
